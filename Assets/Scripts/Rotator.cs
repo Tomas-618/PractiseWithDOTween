@@ -9,6 +9,8 @@ public class Rotator : MonoBehaviour
     {
         const int HalfMaxAngle = 180;
 
-        transform.DORotate(Vector3.up * HalfMaxAngle, _duration).SetEase(Ease.Linear).SetLoops(-1);
+        transform.DORotate(Vector3.up * HalfMaxAngle, _duration)
+            .SetEase(Ease.Linear)
+            .SetLoops(-1, LoopType.Incremental);
     }
 }
